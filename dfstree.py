@@ -30,6 +30,8 @@ class Tree(object):
                 subtree = Tree.dfsearcher(t, node)
                 if subtree == node:
                     return subtree
+        #anything else
+        return None
 
 
 
@@ -54,6 +56,12 @@ if __name__ == '__main__':
                            Tree("e"),
                            Tree("f"),]),
                  Tree("c",[Tree("g",[Tree("h")])])
+                ])
+
+    my_tree2 = Tree("a",
+                [Tree("b",[Tree("d"),
+                           Tree("e"),
+                           Tree("f"),])
                 ])
     result = Tree.dfsearcher(my_tree, "h")
     print "Search results: {0}".format(result)
